@@ -1,11 +1,142 @@
-body {
-  background-color: lightblue;
+/* Element Selector */
+body{
+    margin:0;
+    font-family: 'Times New Roman', Times, serif;
+    background: rgb(146, 104, 146);
 }
-h1 {
-  color: white;
-  text-align: center;
+
+/* Main Container */
+.container{
+    display: flex;              
+    max-width: 900px;           
+    margin: 80px auto;
+    background: rgb(165, 105, 105);
+    position: relative;         
+    overflow: hidden; 
+    color: rgb(234, 229, 229);   
+      font-family: 'Times New Roman', Times, serif;       
 }
-p {
-  font-family: verdana;
-  font-size: 20px;
+
+/* Left Form */
+.form-box{
+    width: 50%;
+    padding: 30px;              
+    border-right: 2px solid #ddd;  
+    z-index: 1;    
+               
+}
+
+/* ID Selector */
+#title{
+    text-align: center;
+    color: rgb(235, 235, 255);
+    font-size: 30px;
+     margin-bottom: 20px;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;  
+/* removes default gaps */
+}
+td {
+ padding: 10px ;              /* spacing between label & input */
+   vertical-align: middle;
+    
+}
+
+/* Attribute Selector */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea{
+    width: 100%;
+    padding: 8px;
+ border: none;
+    margin: 10px;    
+     border-radius: 3px;               /* remove extra margin for table */
+ box-sizing: border-box;            
+}
+
+/* Inline Block for gender */
+.gender input{
+margin-right: 8px;     
+    width: auto;
+    margin-right: 10px;
+    
+}
+
+/* Center alignment for button rows */
+.center {
+    text-align: center;
+}
+
+/* Button */
+button{
+    width: 100%;
+    padding: 10px;
+    background: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+/* Right Side */
+.right-box{
+    
+    height: 50px;
+    background: url("image.jpg");
+   margin-top: 130px;
+    max-width: 500px;
+   
+    
+   
+}
+.right-img{
+    
+    max-width: 500px;
+    
+}
+
+/* Label */
+label{
+    font-weight: bold;   
+    color: rgb(255, 255, 255);
+     display: inline-block;   
+     margin-bottom: 5px;  
+}
+
+/* Login Text */
+.login-text{
+    text-align: center;
+    margin-top: 120px;
+    font-size: 14px;
+}
+
+/* Login Button */
+.login-btn{
+    background: transparent;
+    border: 0px solid blue;
+    color: blue;
+    padding: 2px 5px;
+    cursor: pointer;
+    font-weight: bold;   
+}
+.login-btn:hover{
+    background: blue;
+    color: white;
+
+}
+select {
+    width: 200px;
+    padding: 10px;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    background: white;
+    cursor: pointer;
+    font-size: 14px;
+    
 }
