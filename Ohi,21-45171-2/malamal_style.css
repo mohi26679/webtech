@@ -1,0 +1,75 @@
+/* 1️⃣ Element Selector */
+body {
+    background-color: whitesmoke;
+    font-family: Arial, sans-serif;
+    margin: 20px; /* Box Model */
+}
+
+/* 2️⃣ ID Selector */
+#mainTitle {
+    color: darkblue;
+    text-align: center;
+    border-bottom: 3px solid black; /* Box Model */
+    padding: 10px;
+}
+
+/* 3️⃣ Class Selector */
+.description {
+    text-align: center;
+    margin-bottom: 20px;
+    color: gray;
+}
+
+/* 4️⃣ Group Selector */
+h2, p {
+    margin: 10px;
+}
+
+/* 5️⃣ Product Container (Max Width + Positioning) */
+.product-container {
+    max-width: 600px; /* Required */
+    margin: auto;
+    position: relative;
+}
+
+/* 6️⃣ Product Card */
+.product-card {
+    background: white;
+    border: 2px solid black; /* Box Model */
+    padding: 15px;
+    margin: 10px;
+    display: inline-block; /* Required */
+    width: 250px;
+    position: relative;
+    z-index: 1; /* Required */
+}
+
+/* 7️⃣ Button Styling */
+.buy-btn {
+    background-color: green;
+    color: white;
+    padding: 8px;
+    border: none;
+    display: inline-block; /* Required */
+}
+
+/* 8️⃣ Table Styling */
+table {
+    border-collapse: collapse;
+    width: 60%;
+    margin: 20px auto;
+    overflow: hidden; /* Required */
+}
+
+table, th, td {
+    border: 1px solid black;
+    padding: 10px; /* Box Model */
+}
+
+/* 9️⃣ Input Styling */
+input {
+    margin: 5px;
+    padding: 8px;
+    border: 1px solid gray;
+    display: block; /* Required */
+}
