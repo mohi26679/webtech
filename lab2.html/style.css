@@ -1,142 +1,46 @@
-/* Element Selector */
-body{
-    margin:0;
-    font-family: 'Times New Roman', Times, serif;
-    background: rgb(146, 104, 146);
+body { margin: 0; text-align: center; font-family: 'Segoe UI', Arial; background: #eef2f3; touch-action: manipulation; }
+header { background: #002244; color: white; padding: 15px; }
+.logo { width: 60px; }
+
+#gameSection { display: none; padding: 10px; }
+.stats { font-size: 18px; font-weight: bold; margin-bottom: 10px; }
+
+#gameArea {
+  width: 95%;
+  max-width: 800px;
+  height: 350px;
+  margin: auto;
+  border: 5px solid #333;
+  position: relative;
+  background: url("bg.jpg") repeat-x;
+  background-size: cover;
+  overflow: hidden;
+  animation: scrollBg 6s linear infinite;
+  animation-play-state: paused;
 }
 
-/* Main Container */
-.container{
-    display: flex;              
-    max-width: 900px;           
-    margin: 80px auto;
-    background: rgb(165, 105, 105);
-    position: relative;         
-    overflow: hidden; 
-    color: rgb(234, 229, 229);   
-      font-family: 'Times New Roman', Times, serif;       
+@keyframes scrollBg {
+  from { background-position: 0 0; }
+  to { background-position: -800px 0; }
 }
 
-/* Left Form */
-.form-box{
-    width: 50%;
-    padding: 30px;              
-    border-right: 2px solid #ddd;  
-    z-index: 1;    
-               
-}
+#player { width: 60px; position: absolute; bottom: 20px; left: 50px; z-index: 10; transition: opacity 0.2s; }
+#thief { width: 55px; position: absolute; bottom: 20px; left: 80% ; z-index: 10; }
 
-/* ID Selector */
-#title{
-    text-align: center;
-    color: rgb(235, 235, 255);
-    font-size: 30px;
-     margin-bottom: 20px;
-}
+.obstacle { width: 35px; height: 35px; background: #d9534f; position: absolute; bottom: 20px; border-radius: 5px; }
 
-/* Table styling */
-table {
-    width: 100%;
-    border-collapse: collapse;  
-/* removes default gaps */
+/* মোবাইল কন্ট্রোল ডিজাইন */
+.mobile-controls { margin-top: 20px; display: flex; justify-content: center; gap: 15px; }
+.ctrl-btn { 
+  width: 70px; height: 70px; border-radius: 50%; border: none; 
+  background: #002244; color: white; font-size: 18px; cursor: pointer;
+  box-shadow: 0 4px #001122;
 }
-td {
- padding: 10px ;              /* spacing between label & input */
-   vertical-align: middle;
-    
-}
+.ctrl-btn:active { transform: translateY(4px); box-shadow: 0 0 #001122; }
 
-/* Attribute Selector */
-input[type="text"],
-input[type="email"],
-input[type="password"],
-textarea{
-    width: 100%;
-    padding: 8px;
- border: none;
-    margin: 10px;    
-     border-radius: 3px;               /* remove extra margin for table */
- box-sizing: border-box;            
-}
+.invincible { opacity: 0.5; } /* ধাক্কা খেলে প্লেয়ার ঝাপসা হবে */
 
-/* Inline Block for gender */
-.gender input{
-margin-right: 8px;     
-    width: auto;
-    margin-right: 10px;
-    
-}
-
-/* Center alignment for button rows */
-.center {
-    text-align: center;
-}
-
-/* Button */
-button{
-    width: 100%;
-    padding: 10px;
-    background: blue;
-    color: white;
-    border: none;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-
-/* Right Side */
-.right-box{
-    
-    height: 50px;
-    background: url("image.jpg");
-   margin-top: 130px;
-    max-width: 500px;
-   
-    
-   
-}
-.right-img{
-    
-    max-width: 500px;
-    
-}
-
-/* Label */
-label{
-    font-weight: bold;   
-    color: rgb(255, 255, 255);
-     display: inline-block;   
-     margin-bottom: 5px;  
-}
-
-/* Login Text */
-.login-text{
-    text-align: center;
-    margin-top: 120px;
-    font-size: 14px;
-}
-
-/* Login Button */
-.login-btn{
-    background: transparent;
-    border: 0px solid blue;
-    color: blue;
-    padding: 2px 5px;
-    cursor: pointer;
-    font-weight: bold;   
-}
-.login-btn:hover{
-    background: blue;
-    color: white;
-
-}
-select {
-    width: 200px;
-    padding: 10px;
-    border-radius: 2px;
-    border: 1px solid #ccc;
-    background: white;
-    cursor: pointer;
-    font-size: 14px;
-    
+@media (max-width: 600px) {
+  #gameArea { height: 250px; }
+  #player, #thief { width: 45px; }
 }

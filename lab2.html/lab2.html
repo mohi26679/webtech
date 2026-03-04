@@ -1,79 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Signup Form</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BANGLADESH YOUTH REVULATION</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
+<header>
+  <img src="logo.png" class="logo">
+  <h1>BANGLADESH YOUTH REVULATION</h1>
+  <button id="startBtn" onclick="startGame()">🎮 Start Mission</button>
+</header>
 
-    <div class="form-box">
-        <h2 id="title">Sign Up</h2>
+<section id="gameSection">
+  <div class="stats">
+    Score: <span id="score">0</span> | ❤️ Life: <span id="life">3</span> | 🏆 High: <span id="highScore">0</span>
+  </div>
 
-        <form>
-            <table>
-                <tr>
-                    <td><label>Username:</label></td>
-                    <td><input type="text" placeholder="Enter username"></td>
-                </tr>
-                <tr>
-                    <td><label>Email:</label></td>
-                    <td><input type="email" placeholder="Enter email"></td>
-                </tr>
-                <tr>
-                    <td><label>Password:</label></td>
-                    <td><input type="password" placeholder="Enter password"></td>
-                </tr>
-                <tr>
-                    <td><label>Confirm Password:</label></td>
-                    <td><input type="password" placeholder="Confirm password"></td>
-                </tr>
-                <tr>
-                    <td><label>Gender:</label></td>
-                    <td>
-                        <input type="radio" name="g"> Male
-                        <input type="radio" name="g"> Female
-                        <input type="radio" name="g"> Other
-                    </td>
-                </tr>
-                <tr> 
-                  <td><label>Religion:</label> </td>
-                  <td>
-                     <Select name="Religion">
-                        <option value=" "> -- Select Religion </option>
-                        <option value="ISLAM">ISLAM</option>
-                         <option value="HINDU">HINDU</option>
-                          <option value="CHRISTIAN">CHRISTIAN</option>
-                     </Select>
-                  </td><br>
-                </tr>
-                <tr>
-                    <td><label>About You:</label></td>
-                    <td><textarea placeholder="Write something"></textarea></td>
-                </tr>
-                <tr>
-                    <td colspan="2" style="text-align:center;">
-                        <button>Sign Up</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" style="text-align:center;">
-                        <p class="login-text">
-                            Do you have an account? 
-                            <button type="button" class="login-btn">LOGIN</button>
-                        </p>
-                    </td>
-                </tr>
-            </table>
-        </form>
+  <div id="gameArea">
+    <img id="player" src="hero.gif">
+    <img id="thief" src="thief.png">
     </div>
 
-    <div class="right-box">
-        <img src="image.jpg" alt="Signup Image" class="right-img">
-    </div>
+  <div class="mobile-controls">
+    <button class="ctrl-btn" id="btnLeft">⬅️</button>
+    <button class="ctrl-btn" id="btnJump">⬆️ JUMP</button>
+    <button class="ctrl-btn" id="btnRight">➡️</button>
+  </div>
 
-</div>
+  <h2 id="gameOverStatus"></h2>
+</section>
 
+<script src="my.js"></script>
 </body>
 </html>
